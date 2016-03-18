@@ -1,144 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
+﻿<!DOCTYPE html>
+<html ng-app="mainApp">
 <head>
-  <title>Jordan Shields</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/image_slide.js"></script>
+
+    <script src="Scripts/jquery-2.2.1.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-cookies.min.js"></script>
+
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="Content/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="Content/Style.css" />
+
+    <title>Jordan Shields</title>
 </head>
+<body> 
+    <nav class="mainNav navbar" ng-controller="TabController as tabCtrl">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="headerLogo navbar-brand" ui-sref="bio">Jordan Shields - Web Applications Developer</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{ active:tabCtrl.isSet(1) }">
+                        <a ui-sref="bio" ng-click="tabCtrl.setTab(1)">Bio</a>
+                    </li>
+                    <li ng-class="{ active:tabCtrl.isSet(2) }">
+                        <a ui-sref="webdev" ng-click="tabCtrl.setTab(2)">Web Dev</a>
+                    </li>
+                    <li ng-class="{ active:tabCtrl.isSet(3) }">
+                        <a ui-sref="sql" ng-click="tabCtrl.setTab(3)">SQL</a>
+                    </li>
+                    <li ng-class="{ active:tabCtrl.isSet(4) }">
+                        <a ui-sref="analyst" ng-click="tabCtrl.setTab(4)">Analyst</a>
+                    </li>
+                    <li ng-class="{ active:tabCtrl.isSet(5) }">
+                        <a ui-sref="infrastructure" ng-click="tabCtrl.setTab(5)">IT Infrastructure</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<body>
-  <div id="main">
-    <div id="header">
-	  <div id="banner">
-	    <div id="welcome">
-	      <h1>Jordan Shields</h1>
-	    </div><!--close welcome-->
-	    <div id="welcome_slogan">
-	      <h1>Information Systems Professional</h1>
-	    </div><!--close welcome_slogan-->
-	  </div><!--close banner-->
-    </div><!--close header-->
-
-	<div id="menu_container">
-	  <div id="menubar">
-        <ul id="menu">
-          <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="Assignment4.html">Assignment 4</a></li>
-          <li><a href="/Assignment-5/">Assignment 5</a></li>
-          <li><a href="/Angular-Json-tutorial/">Assignment 6</a></li>
-          <li><a href="/NodeJsBlog/">Assignment 7</a></li>
-         <!-- <li><a href="calculator.html">Assignment 2</a></li>
-          <li><a href="#">Resume</a></li> -->
-        </ul>
-      </div><!--close menubar-->	
-	</div><!--close menu_container-->	
-    
-	<div id="site_content">		
-
-	  <div class="sidebar_container">       
-		<div class="sidebar">
-          <div class="sidebar_item">
-            <h2>Technology Solutions</h2>
-            <p>I'm a firm believer that effective utilization of technology can solve almost any problem.</p>
-          </div><!--close sidebar_item--> 
-        </div><!--close sidebar-->     		
-		<div class="sidebar">
-          <div class="sidebar_item">
-            <h2>Updates</h2>
-            <h3>Present</h3>
-            <p>I am currently working on developing my skills in Ruby and Python.</p>         
-		  </div><!--close sidebar_item--> 
-        </div><!--close sidebar-->
-		<div class="sidebar">
-          <div class="sidebar_item">
-            <h3>December 2014</h3>
-            <p>As Project Manager and Developer, I am proud to proclaim that my team's MVC 5 application was selected among competitors for utilization at Baptist Health.</p>         
-		  </div><!--close sidebar_item--> 
-        </div><!--close sidebar-->  
-		<div class="sidebar">
-          <div class="sidebar_item">
-            <h3>May 2014</h3>
-            <p>Completed CIS 310 Database Design, CIS 200 Software Development 2 (C#), and CIS 320 Systems Analysis and Design with all As. I've reached the intermediate level with C# &amp; SQL.</p>         
-		  </div><!--close sidebar_item--> 
-        </div><!--close sidebar-->  		
-        <div class="sidebar">
-          <div class="sidebar_item">
-            <h2>Contact</h2>
-            <p>LinkedIn: <a href="https://www.linkedin.com/pub/jordan-shields/4b/64b/102">Connect</a></p>
-            <p>Email: <a href="mailto:jshields91@yahoo.com">jshields91@yahoo.com</a></p>
-          </div><!--close sidebar_item--> 
-        </div><!--close sidebar-->
-       </div><!--close sidebar_container-->	
-	
-      <ul class="slideshow">
-        <li class="show"><img width="680" height="250" src="images/home_1.jpg" alt="&quot;Enter your caption here&quot;" /></li>
-        <li><img width="680" height="250" src="images/home_2.jpg" alt="&quot;Headphones&quot;" /></li>
-      </ul>   	 
-	 
-	  <div id="content">
-        <div class="content_item">
-		  <h1>Welcome</h1> 
-          <p>I'm an ascending technology professional. I love what I do, although it would be more accurate to say that my true passion is solving business problems.<br />My techinical skillset includes: C#, ASP .NET MVC 5, SQL, SharePoint 2013, Entity Framework, HTML5, CSS3, JavaScript, AJAX, JSON, jQuery / jQuery Mobile, XML, and Razor (C#).</p>   		
-		  
-		  <div class="content_image">
-		    <img src="images/content_image1.jpg" alt="image1"/>
-	      </div>
-		  <p>Past this page, you can find my resume and technical skillsheet, along with examples of my work.</p>
-		  <p>I'm currently open to all legitimate offers.</p>
-		  <br style="clear:both"/>
-		  
-		 <!-- <div class="content_container">
-		    <p></p>
-		  	<div class="button_small">
-		      <a href="#">Read more</a>
-		    </div><!--close button_small-->
-		 <!-- </div><!--close content_container-->
-         <!-- <div class="content_container">
-		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.</p>          
-		  	<div class="button_small">
-		      <a href="#">Read more</a>
-		    </div><!--close button_small-->		  
-		 <!-- </div><!--close content_container-->		  
-		</div><!--close content_item-->
-      </div><!--close content-->   
-	</div><!--close site_content--> 
-    
-	<div id="content_grey">
-	  <div class="content_grey_container_box">
-		<h4>Latest Blog Post</h4>
-	    <p> Once I start blogging, I'll activate the button below.</p>
-		<div class="readmore">
-		  <a href="#">Read more</a>
-		</div><!--close readmore-->
-	  </div><!--close content_grey_container_box-->
-      <div class="content_grey_container_box">
-       <h4>Latest News</h4>
-	    <p> This section will change</p>
-	    <div class="readmore">
-		  <a href="#">Read more</a>
-		</div><!--close readmore-->
-	  </div><!--close content_grey_container_box-->
-      <div class="content_grey_container_boxl">
-		<h4>Latest Projects</h4>
-	    <p> Phasellus laoreet feugiat risus. Ut tincidunt, ante vel fermentum iaculis.</p>
-	    <div class="readmore">
-		  <a href="#">Read more</a>
-		</div><!--close readmore-->	  
-	  </div><!--close content_grey_container_box1-->      
-	  <br style="clear:both"/>
-    </div><!--close content_grey-->   
- 
-  </div><!--close main-->
-  
-  <div id="footer_container">
-    <div id="footer">
-	  <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://fotogrph.com/">Images</a> | website template by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
-    </div><!--close footer-->  
-  </div><!--close footer_container-->  
-  
+    <!--Page Content-->
+    <div class="row">
+        <div class="span12 ui-view-container">
+            <div class="well" ui-view></div>
+        </div>
+    </div>
 </body>
 </html>
