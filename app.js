@@ -125,15 +125,15 @@
                subcategories: [{
                    name: 'MVC',
                    works: [{
-                       title: 'Baptist Health Project',
+                       title: 'Baptist Health Supply Chain Management Solution',
                        link: {
                            repourl: 'https://github.com/jshields91/MVC_BaptistProjectPartial',
                            ghurl: 'http://www.jordanshields.net/MVC_BaptistProjectPartial/'
                        }
                    }, {
-                       title: 'Hot Dog Lovers',
+                       title: 'MedaPrep',
                        link: {
-                           
+                           ghurl: 'https://www.MedaPrep.com'
                        }
                    }]
                }, {
@@ -171,7 +171,7 @@
                    }]
                }]
            }, {
-               category: 'Analyst',
+               category: 'Business Analyst',
                subcategories: [{
                    name: 'Case Reports',
                    works: [{

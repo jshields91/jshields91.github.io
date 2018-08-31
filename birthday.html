@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Happy Birthday</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="cookie.js"></script>
+    <script src="birthday.js"></script>
+    <style>
+        .intro {
+            display: none;
+        }
+
+        .question {
+            display: none;
+        }
+        .remark {
+            font-weight:700;
+        }
+        .masterDiv {
+            padding:5px 15px 15px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="masterDiv">
+        <div class="header">
+            <h2 class="intro">Hello Tammy...</h2>
+            <h2 class="intro">Happy Birthday...</h2>
+            <h2 class="intro">Congrats to have made it this far...</h2>
+            <h2 class="intro">Now, for a few questions...</h2>
+            <h2 class="intro">Answer Carefully... <br />Answer Honestly...<br />There are no second chances this time.</h2>
+            <h2 class="intro">Good luck...</h2>
+        </div>
+
+        <div id="question1" class="question">
+            <label for="dogName">What is the white dogs name?</label>
+            <input id="dogName" name="dogName" type="text" />
+            <button type="button" id="question1Btn">Next</button>
+        </div>
+
+        <div id="question2" class="question">
+            <label for="levelUp">Just making sure it's you ;)<br />Pick one to level up:</label><br />
+            <input name="levelUp" type="radio" value="Self Esteem" />&nbsp;&nbsp;Self Esteem<br />
+            <input name="levelUp" type="radio" value="Love" />&nbsp;&nbsp;Love<br />
+            <input name="levelUp" type="radio" value="Relaxation" />&nbsp;&nbsp;Relaxation<br />
+            <button type="button" id="question2Btn">Next</button>
+        </div>
+
+        <div id="question3" class="question">
+            <p id="question2Remark" class="remark"></p>
+            <label for="food">What sounds good with steak and shrimp?</label><br />
+            <input name="food" type="radio" value="1" />&nbsp;&nbsp;Sushi<br />
+            <input name="food" type="radio" value="2" />&nbsp;&nbsp;Green Beans<br />
+            <input name="food" type="radio" value="3" />&nbsp;&nbsp;Mashed Potatoes with Sauce<br />
+            <input name="food" type="radio" value="4" />&nbsp;&nbsp;Lobster<br />
+            <button type="button" id="question3Btn">Next</button>
+        </div>
+
+        <div id="question4" class="question">
+            <p id="question3Remark" class="remark">That sounds good</p>
+            <label for="activity">If we did something together, would you prefer it be... </label><br />
+            <input name="activity" type="radio" value="Competitive" />&nbsp;&nbsp;Competitive<br />
+            <input name="activity" type="radio" value="Collaborative" />&nbsp;&nbsp;Collaborative<br />
+            <input name="activity" type="radio" value="Intense" />&nbsp;&nbsp;Intense<br />
+            <input name="activity" type="radio" value="Scary" />&nbsp;&nbsp;Scary<br />
+            <button type="button" id="question4Btn">Next</button>
+        </div>
+
+        <div id="question5" class="question">
+            <p id="question4Remark" class="remark"></p>
+            <label for="fun">Are you having fun so far?</label><br />
+            <input name="fun" type="radio" value="1" />&nbsp;&nbsp;Yes<br />
+            <input name="fun" type="radio" value="2" />&nbsp;&nbsp;No<br />
+            <button type="button" id="question5Btn">Next</button>
+        </div>
+
+        <div id="question6" class="question">
+            <p id="question5Remark" class="remark"></p>
+            <label for="happy">How Happy are you?</label><br />
+            <input name="happy" type="radio" value="1" />&nbsp;&nbsp;Tootsie Rolls tonight!<br />
+            <input name="happy" type="radio" value="1" />&nbsp;&nbsp;Tootsie Rolls tonight!<br />
+            <input name="happy" type="radio" value="1" />&nbsp;&nbsp;Tootsie Rolls tonight!<br />
+            <input name="happy" type="radio" value="1" />&nbsp;&nbsp;Tootsie Rolls tonight!<br />
+            <span style="display:none;" class="hiddenHappy"><input name="happy" type="radio" value="2" />&nbsp;&nbsp;Don't Pick this</span><br />
+            <button type="button" id="question6Btn">Next</button>
+        </div>
+
+        <div id="summary" class="question">
+            <p>
+                Here's your next clue and future path...
+            </p>
+            <p>
+                You wanted to level up <span class="levelUpAnswer"></span>. So you will <span class="levelUpLocation"></span>.
+            </p>
+            <p>
+                Afterwards, we will eat at <span class="foodLocation"></span>.
+            </p>
+            <p>
+                Since you wanted it to be <span class="activityAnswer"></span>, we will <span class="activityLocation"></span>.
+            </p>
+            <p>
+                Now, it's time to equip you for this journey. Here is the final clue... you may want to write it down...
+            </p>
+            <p>
+                <i>
+                    "Unlocking this gift will require you to succeed where you once failed. Don't worry, you can do it... <b>this</b> time..."
+                </i>
+            </p>
+            <p>
+                Still need help?
+                <span class="happyAnswer"></span>
+            </p>
+        </div>
+
+        <div id="niceTry" class="question">
+            <h1>Nice Try! I told you... no second chances on this one!</h1>
+        </div>
+    </div>
+
+</body>
+</html>

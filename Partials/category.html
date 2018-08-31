@@ -8,7 +8,7 @@
             <section class="col-xs-6 text-left center-block subcategory">
                 <h3 class="subName text-center">{{sub.name}}</h3>
                 <ul>
-                    <li ng-repeat="work in sub.works">{{work.title}} <a ng-href="{{work.link.repourl}}" ng-if="work.link.repourl">Github Repo</a><span ng-if="work.link.ghurl"> | </span><a ng-href="{{work.link.ghurl}}" ng-if="work.link.ghurl">Gh-Page</a></li>               
+                    <li ng-repeat="work in sub.works">{{work.title}} <a ng-href="{{work.link.repourl}}" ng-if="work.link.repourl">Github Repo</a><span ng-if="work.link.ghurl"> | </span><a ng-href="{{work.link.ghurl}}" ng-if="work.link.ghurl">Preview</a></li>               
                 </ul>
             </section>
             <span class="col-xs-3" />

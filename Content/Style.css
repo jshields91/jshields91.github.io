@@ -11,14 +11,17 @@ html {
 
 body {
     margin: 0;
-    width:100%;
+    width: 100%;
     min-height: 100%;
     font-family: Verdana, Helvetica, Arial, sans-serif;
-    background-image: url('../Resources/bluesmoke.jpg');
+    /*background-image: url('../Resources/bluesmoke.jpg');*/
+    background-color: rgba(138, 188, 204, 0.81);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: 0;
-    overflow-x:hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width: 650px;
 }
 
 .well[ui-view] {
@@ -128,6 +131,6 @@ li.active > a:focus {
 
 .skill {
     color:#fff;
-    text-shadow:#969696 1px 3px 0, #aba8a8 1px 13px 5px;
+    /*text-shadow:#969696 1px 3px 0, #aba8a8 1px 13px 5px;*/
     font-size: 2em;
 }
