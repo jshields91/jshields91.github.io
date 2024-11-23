@@ -1121,7 +1121,7 @@ button:focus {
 }
 
 .dark-vertion .nav-strict {
-  background-color: #202026;
+  background-color: rgba(32, 32, 38, 95%);
 }
 
 .dark-vertion.home-video .img-color-overlay {
@@ -3893,5 +3893,31 @@ BLOG Pagination
 .mh-about-tag-2 ul {
   margin-bottom: 30px;
   margin-top: 20px;
+}
+
+#mh-contact .contact-link {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  color: #0bceaf;
+  border: 2px solid white;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+#mh-contact .contact-link:hover {
+  color: white;
+  border: 2px solid #0bceaf;
+}
+
+h1.contact-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-link > .fa-linkedin {
+  flex-grow: 1;
 }
 /*# sourceMappingURL=styles.css.map */
